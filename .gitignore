@@ -3,6 +3,7 @@
 *.o
 *.out
 a.out
+db
 
 # Build directories
 build/

@@ -599,7 +599,7 @@ class OllamaClient {
 
 public:
     std::string embedModel = "nomic-embed-text";
-    std::string genModel   = "llama3.2";
+    std::string genModel = "llama3.2:1b";
 
     OllamaClient(const std::string& h = "127.0.0.1", int p = 11434)
         : host(h), port(p) {}
