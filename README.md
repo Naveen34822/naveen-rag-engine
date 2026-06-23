@@ -1,4 +1,4 @@
-# VectorDB — Build a Vector Database from Scratch in C++
+# Naveen RAG Engine
 
 A fully working **Vector Database** built from scratch in C++ with a web UI.  
 Implements **HNSW**, **KD-Tree**, and **Brute Force** search algorithms side-by-side, plus a **RAG pipeline** powered by a local LLM via Ollama.
@@ -131,11 +131,9 @@ You should see both models listed.
 Open **PowerShell** and run:
 
 ```powershell
-git clone https://github.com/YOUR_USERNAME/VectorDB.git
+git clone https://github.com/Naveen34822/naveen-rag-engine.git
 cd VectorDB
 ```
-
-*(Replace `YOUR_USERNAME` with the actual GitHub username)*
 
 ---
 
