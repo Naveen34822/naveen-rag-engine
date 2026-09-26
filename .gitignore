@@ -1,4 +1,5 @@
 # Compiled binaries
+benchmark
 *.exe
 *.o
 *.out
