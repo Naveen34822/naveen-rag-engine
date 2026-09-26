@@ -223,6 +223,28 @@ The answer streams in with a typewriter effect. Click the **context chips** to s
 
 ---
 
+## Performance Benchmark (HNSW vs Brute-Force)
+
+The repository includes a standalone benchmark script (`benchmark.cpp`) to test the performance of the HNSW index against a brute-force search. The benchmark simulates real-world usage by generating clustered vectors (768D) to mimic document topic clusters, and tests across varying `ef_search` parameters to show the trade-off between speed and recall.
+
+**Results on a 10K document corpus (768D vectors, k=5):**
+
+| `ef_search` | HNSW Latency | Speedup vs Brute-Force | Recall@5 |
+|-------------|--------------|------------------------|----------|
+| 50          | ~0.68 ms     | **7.0x**               | 74.9%    |
+| 100         | ~1.22 ms     | **3.9x**               | 83.1%    |
+| 200         | ~2.21 ms     | **2.1x**               | **90.0%**|
+
+*(Brute-Force average latency: ~4.74 ms/query)*
+
+**To run the benchmark yourself:**
+```bash
+g++ -std=c++17 -O2 -o benchmark benchmark.cpp
+./benchmark
+```
+
+---
+
 ## REST API Reference
 
 The server exposes a full REST API at `http://localhost:8080`.
